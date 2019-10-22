@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Hello, world!</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- <link rel="stylesheet" type="text/css" href="<a href="https://www.freepik.com/free-photos-vectors/background>"> -->
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- Material Kit CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="css/animate.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link href="assets/css/material-kit.css?v=2.0.5" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Amiri|Cairo|Changa|Lemonada" rel="stylesheet">
+
+  <style type="text/css">
+  #goR{
+    direction: rtl; 
+  }
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    span,
+    div {
+      font-family: 'Cairo', sans-serif !important;
+    }
+
+
+
+    .inline {
+      display: inline;
+    }
+
+    .goals-icon {
+      height: 33px;
+      width: 33px;
+    }
+
+    .goals-title-text {
+      position: relative;
+      bottom: 34px;
+      left: 13px;
+    }
+
+
+    .fa-li {
+      right: 2em
+    }
+
+    ul.fa-ul li {
+      text-align: right;
+      padding-right: 7rem;
+      padding-bottom: 2rem;
+    }
+
+    .card.container  {
+      transition: linear;
+      transition-duration: 1s;
+      /* padding: 1rem */
+      /* margin: 0.1rem */
+       
+      
+    }
+    .nav-link{
+      width:200%;
+    }
+      .card.container:hover{
+        background-color: #7C239A;
+     }  
+    .card:corner-present{
+      background-color: aquamarine;
+    }
+
+    .carousel.carousel-full-nagivation .left {
+  cursor: url("../../img/arrow-left.png"), url("../../img/arrow-left.cur"), default !important;
+}
+
+.carousel.carousel-full-nagivation .right {
+  cursor: url("../../img/arrow-right.png"), url("../../img/arrow-right.cur"), default !important;
+}
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+  display: none;
+  align-items: center;
+  width: 100%;
+  transition: transform 0.6s ease;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+  transform: translateX(0);
+}
+
+@supports (transform-style: preserve-3d) {
+  .carousel-item-next.carousel-item-left,
+  .carousel-item-prev.carousel-item-right {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.carousel-item-next,
+.active.carousel-item-right {
+  transform: translateX(100%);
+}
+
+@supports (transform-style: preserve-3d) {
+  .carousel-item-next,
+  .active.carousel-item-right {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.carousel-item-prev,
+.active.carousel-item-left {
+  transform: translateX(-100%);
+}
+
+@supports (transform-style: preserve-3d) {
+  .carousel-item-prev,
+  .active.carousel-item-left {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  opacity: .9;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+}
+
+.carousel-indicators li {
+  position: relative;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicators li::before {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  content: "";
+}
+
+.carousel-indicators li::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  content: "";
+}
+
+.carousel-indicators .active {
+  background-color: #ffffff;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+.carousel .carousel-indicators li {
+  -webkit-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+.carousel .carousel-control.left,
+.carousel .carousel-control.right {
+  background-image: none;
+}
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+
+
+.carousel .carousel-control.right i {
+  right: 0;
+}
+
+.carousel .card {
+  margin-top: 0;
+}
+
+.carousel .item {
+  text-align: center;
+}
+
+.carousel.carousel-full-nagivation .carousel-control {
+  width: 50%;
+}
+
+
+.carousel.carousel-full-nagivation .carousel-control.left,
+.carousel.carousel-full-nagivation .carousel-control.right {
+  background-image: none;
+}
+
+.carousel.carousel-full-nagivation .carousel-control .material-icons,
+.carousel.carousel-full-nagivation .carousel-control .fa {
+  display: none;
+}
+
+.carousel .carousel-control {
+  height: 15%;
+  margin: auto;
+}
+
+.carousel .carousel-control-prev .material-icons,
+.carousel .carousel-control-next .material-icons {
+  z-index: 5;
+  display: inline-block;
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  margin: auto;
+}
+
+.carousel .carousel-indicators {
+  bottom: 5px;
+}
+
+.carousel .carousel-indicators li,
+.carousel .carousel-indicators .active {
+  margin: 11px 10px;
+}
+
+.carousel .carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  text-indent: -999px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.carousel .carousel-indicators .active {
+  margin-top: 10px;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.carousel .carousel-caption {
+  padding-bottom: 45px;
+}
+
+.carousel .carousel-caption .material-icons {
+  position: relative;
+  top: 5px;
+}
+.page-header .carousel .carousel-indicators {
+  bottom: 60px;
+}
+.card-carousel {
+  overflow: hidden;
+}
+.carousel .card .card-body {
+    max-width: 340px;
+    margin: 0 auto;
+    min-height: 400px;
+  }
+ #navBar{
+   height: 3em;
+   margin-bottom: 0em
+   margin=0em;
+   
+ }
+ #why{
+   color:#7C239A;
+ }
+ #why2{
+  color:#7C239A;
+ }
+ /* #particles-js{
+   height: 100%;
+   background-color: #29293d
+ } */
+ * {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+  </style>
+</head>
+
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light rtl" id="navBar"  >
+        <a class="navbar-brand" href="#navBar"><img src="D:\downloads\DataHomePage\material-kit-html-v2.0.5\material-kit-html-v2.0.5\assets\img\logo.jpeg" alt="logo" width="30" height="30" ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">اخر الفعاليات <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">الأنشطة</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">الإستراتيجية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">الأهداف</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">تواصل معنا</a>
+              </li>
+          </ul>
+        </div>
+      </nav> -->
+  
+    <nav class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg navbar-transparent" id="navBar" >
+    <div class="container">
+        
+      <div class="navbar-translate">
+          <a class="navbar-brand" href="#">
+              <img src="D:\downloads\DataHomePage\material-kit-html-v2.0.5\material-kit-html-v2.0.5\assets\img\logo.jpeg" style="height: 200%" alt="logo">
+            </a>
+       <a class="corner-present"></a> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"> </span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button> 
+      </div> 
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown nav-item">
+            
+            <div class="dropdown-menu dropdown-with-icons">
+              <a href="./index.html" class="dropdown-item"> 
+                <i class="material-icons">layers</i> All Components
+              </a>
+              <a href="https://demos.creative-tim.com/material-kit/docs/2.1/getting-started/introduction.html"
+                class="dropdown-item">
+                <i class="material-icons">content_paste</i> Documentation
+              </a>
+            </div>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/SaudiData2030"
+              target="_blank" data-original-title="Follow us on Twitter">
+              <i class="fab fa-twitter fa-2x"></i> 
+            </a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
+              href="https://www.linkedin.com/groups/13678251/" target="_blank"
+              data-original-title="Like us on Facebook">
+              <i class="fab fa-linkedin fa-2x"></i> 
+            </a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
+              href="https://www.instagram.com/CreativeTimOfficial" target="_blank"
+              data-original-title="Follow us on Instagram">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a> 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <i class="material-icons">apps</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </nav>
+  <!-- -->
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/background.gif')" >
+    <div class="container fadeInDown animated">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="brand text-center fadeInDown animated " data-aos="fade-up"
+          data-aos-duration="3000">
+            <h1 style="font-family: 'Cairo',sans-serif" class="trigger">مجموعة الاهمتام بعلم البيانات </h1>
+            <h3 class="title text-center">SIG</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main main-raised">
+    <div class="fluid-container">
+      <div class="container section text-center animted" data-aos="zoom-in-up">
+
+        <h1>من نحن </h1>
+
+        <p class="title fadeInRight animated" style="font-size:1.2rem "> مجموعة االهتمام بعلم البيانات هي أحدى
+          مجموعات االهتمام اليت ترشف عليها جمعية
+          الحاسبات السعودية وتتكون من عدد من أعضاء
+          الجمعية الذين يرغبون في القيام بأنشطة تتعلق
+          بمجال علم البيانات</p>
+      </div>
+
+      <div class="section" style="background-color:#E3E3E3" >
+        <div class="container text-center">
+          <!-- <div class="col-1">
+                <img class="goals-icon" src="D:\downloads\DataHomePage\material-kit-html-v2.0.5\material-kit-html-v2.0.5\assets\img\wizard.png"style="width: 100%">
+              </div> -->
+
+          <!-- <div dir="ltr" class="col-2"> -->
+
+          <h1 data-aos="fade-right">اخر الفعاليات<span class="m-2" style="font-size: 2.5rem"><i class="fas fa-magic fa-1x"></i></span>
+          </h1>
+
+          <!--         carousel  -->
+          <div class="section" id="carousel" data-aos="fade-right">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                  <!-- Carousel Card -->
+                  <div class="card card-raised card-carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                      data-interval="3000">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="./assets/img/bg2.jpg" alt="First slide">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h4>
+                              <i class="material-icons">location_on</i> Yellowstone National Park, United States
+                            </h4>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="./assets/img/bg3.jpg" alt="Second slide">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h4>
+                              <i class="material-icons">location_on</i> Somewhere Beyond, United States
+                            </h4>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="./assets/img/bg.jpg" alt="Third slide">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h4>
+                              <i class="material-icons">location_on</i> Yellowstone National Park, United States
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                        data-slide="prev">
+                        <i class="material-icons">keyboard_arrow_left</i>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                        data-slide="next">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- End Carousel Card -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--         end carousel -->
+
+
+
+          <!-- </div> -->
+        </div>
+       
+      </div>
+
+
+
+
+      <div class="section">
+        <div class="container" dir="rtl">
+          <!-- <div class="row" dir="rtl" style="padding-bottom: 20px"> -->
+          <!-- <div class="col-1">
+              <img class="goals-icon" src="D:\downloads\DataHomePage\material-kit-html-v2.0.5\material-kit-html-v2.0.5\assets\img\wizard.png"style="width: 100%">
+            </div> -->
+
+          <!-- <div dir="ltr" class="col-2"> -->
+          <div class="row" dir="rtl" data-aos="fade-left">
+            <h1><span class="m-2" style="font-size: 2.5rem"><i class="fas fa-magic fa-1x"></i></span>الأنشطة</h1>
+          </div>
+        </div>
+
+        <!-- <div  class="row"> -->
+        <ul class="fa-ul fadeInRight" dir="rtl" style="font-size:1.5em;" data-aos="fade-left">
+
+
+          <li dir="rtl" style="">
+            <span class="fa-li">
+              <i class="fas fa-search"></i>
+            </span>
+            <!-- <p> -->
+            اكتشاف المواهب والقدرات وتنميتها بشكل إيجابي
+            <!-- </p> -->
+          </li>
+
+          <li>
+            <span class="fa-li">
+              <i class="fas fa-thumbs-up" style=" font-size: 1em;"></i>
+            </span>
+            رفع الوعي الثقافي للمجتمع عرب وسائل التواصل الملختلفة.
+          </li>
+          <li style=" font-size: 1em;">
+            <span class="fa-li">
+
+              <i class="fas fa-laptop-code"></i>
+            </span>
+            تنظيم املحارضات والندوات وورش العمل واملؤتمرات والربامج التدريبية
+          </li>
+          <li style=" font-size: 1em;">
+            <span class="fa-li">
+              <i class="far fa-lightbulb"></i>
+            </span>
+            الملشاركة في النشطة والفعاليات الملحلية والخارجية الملتعلقة بعلم البيانات وتقنياتها
+          </li>
+          <li style=" font-size: 1em;">
+            <span class="fa-li">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </span>
+            تقديم الحلول والدراسات والستشارات في مجال علم البيانات الملشاركة في تطوير التقنيات الملتعلقة علم
+            البيانات محليا
+          </li>
+          <!-- <li> -->
+
+
+          <!-- <h4 class="goals-title-text">فع الوعي الثقافي للمجتمع عرب وسائل التواصل املختلفة. ●
+                تنظيم املحارضات والندوات وورش العمل واملؤتمرات والربامج ●
+                التدريبية.
+                التنسيق والتواصل مع املجموعات املشابWه داخليا وخارجيا. ●
+                املشاركة في األنشطة والفعاليات املحلية والخارجية املتعلقة ●
+                بعلم البيانات وتقنياتها.
+                تقديم الحلول والدراسات واالستشارات في مجال علم البيانات. ●
+                الملشاركة في تطوير التقنيات املتعلقة علم البيانات محليا 
+              </h4>
+            </div> -->
+
+
+          <!-- </div> -->
+        </ul>
+
+        <!-- </div> -->
+      </div>
+      <div class="section" style="background-color:#E3E3E3">
+        <div class="container">
+          <div class="row" dir="rtl" style="padding-bottom: 20px" data-aos="fade-right">
+            <!-- <div class="col-1">
+              <img class="goals-icon" src="D:\downloads\DataHomePage\material-kit-html-v2.0.5\material-kit-html-v2.0.5\assets\img\wizard.png"style="width: 100%">
+            </div> -->
+
+            <!-- <div dir="ltr" class="col-2"> -->
+            <h1><span class="m-2" style="font-size: 2.5rem"><i class="fas fa-chess-rook"></i></span>الإستراتيجية</h1>
+            <!-- </div> -->
+            <div class="rtl">
+            <h4 id="goR"style="font-size: 1.9em; ">أن تكون المجموعة مرجعا في مجال علم البيانات
+              وتقنياتها والأستفادة منها عن طريق ربط المهتمين بعلم
+              البيانات وتوعيتهم وتحفزيهم.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="row" dir="rtl" style="padding-bottom: 20px">
+            <!-- <div class="col-1">
+                    <img class="goals-icon" src="D:\downloads\DataHomePage\material-kit-html-v2.0.5\material-kit-html-v2.0.5\assets\img\wizard.png"style="width: 100%">
+                  </div> -->
+
+            <!-- <div dir="ltr" class="col-2"> -->
+            <h1><span class="m-2 rtl" style="font-size: 2.5rem"><i class="fab fa-galactic-republic"></i></span>الأهداف
+            </h1>
+          </div>
+          <div class="col-lg-12 container-fluid row">
+            <div class="col-lg-3 col-md-4">
+              <div class="card container" id="1" data-aos="flip-left"
+              data-aos-easing="ease-out-cubic">
+                <div class="card-head text-center">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTZMVxCrfOh9Of1EaMSr6dz33GFepg17gJK4PLT9Ot8pYvEAaSbw"
+                    alt="Circle Image" class="rounded-circle img-fluid" style="margin: 10px">
+                </div>
+                <div class="card-body">
+                  <p>Lorem ipusm jfsjfiejfwejsdu nawuf nsaf nwu</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div class="card container" id="2" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic">
+              <div class="card-head text-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTZMVxCrfOh9Of1EaMSr6dz33GFepg17gJK4PLT9Ot8pYvEAaSbw" alt="Circle Image" class="rounded-circle img-fluid"
+                  style="margin: 10px">
+              </div>
+              <div class="card-body">
+                <p>Lorem ipusm jfsjfiejfwejsdu nawuf nsaf nwu</p>
+              </div>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div class="card container" id="3" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic">              <div class="card-head text-center">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTZMVxCrfOh9Of1EaMSr6dz33GFepg17gJK4PLT9Ot8pYvEAaSbw"
+                  alt="Circle Image" class="rounded-circle img-fluid" style="margin: 10px">
+              </div>
+              <div class="card-body">
+                <p>Lorem ipusm jfsjfiejfwejsdu nawuf nsaf nwu</p>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div class="card container" id="4" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic">        
+                    <div class="card-head text-center">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTZMVxCrfOh9Of1EaMSr6dz33GFepg17gJK4PLT9Ot8pYvEAaSbw"
+                  alt="Circle Image" class="rounded-circle img-fluid" style="margin: 10px">
+                   </div>
+              <div class="card-body" data-aos="flip-left">
+                <p>Lorem ipusm jfsjfiejfwejsdu nawuf nsaf nwu</p>
+              </div>
+            </div>
+          </div>
+            <div class="card col-lg-3 col-md-4 container">
+              <div class="card-head text-center" data-aos="flip-left"
+              data-aos-easing="ease-out-cubic">
+                <div class="card-head text-center">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTZMVxCrfOh9Of1EaMSr6dz33GFepg17gJK4PLT9Ot8pYvEAaSbw"
+                    alt="Circle Image" class="rounded-circle img-fluid" style="margin: 10px">
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Lorem ipusm jfsjfiejfwejsdu nawuf nsaf nwu</p>
+              </div>
+            </div>
+            <div class="card col-lg-3 col-md-4 container">
+              <div class="card-head text-center" data-aos="flip-left"
+              data-aos-easing="ease-out-cubic">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTZMVxCrfOh9Of1EaMSr6dz33GFepg17gJK4PLT9Ot8pYvEAaSbw"
+                  alt="Circle Image" class="rounded-circle img-fluid" style="margin: 10px">
+              </div>
+              <div class="card-body">
+                <p>Lorem ipusm jfsjfiejfwejsdu nawuf nsaf nwu</p>
+              </div>
+            </div>
+            <div class="card col-lg-3 col-md-4 container">
+              <div class="card-head text-center" data-aos="flip-left"
+              data-aos-easing="ease-out-cubic">
+                <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTZMVxCrfOh9Of1EaMSr6dz33GFepg17gJK4PLT9Ot8pYvEAaSbw"
+                alt="Circle Image" class="rounded-circle img-fluid" style="margin: 10px">
+              </div>
+              <div class="card-body">
+                <p>Lorem ipusm jfsjfiejfwejsdu nawuf nsaf nwu</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <footer class="footer footer-default" style="background-color:#29293d">
+      <div class="container">
+        <section class="hestia-contact contactus section-image" id="contact" data-sorder="hestia_contact"
+          style="background-image: url(D:\downloads\DataHomePage\material-kit-html-v2.0.5\material-kit-html-v2.0.5\assets\img\bg2.jpg);">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 hestia-contact-title-area">
+                <h2 class="hestia-title" style="color:#7C239A">توصل معنا!</h2>
+                <h5 class="description" style="color:#fff">اذا عندك اقتراحات نصايح او اسئلة هنا كل طرق التواصل</h5>
+                <div class="hestia-description">
+                  <div class="hestia-info info-horizontal">
+                    <div class="icon icon-primary"><i class="fab fa-twitter"></i></div>
+                    <div class="description">
+                      <h4 class="info-title" style="font-size: 18" id="why">تابعنا على تويتر
+                      </h4>
+                      <p style="color:rgb(255, 255, 255)">للتواصل على تويتر 
+                        
+                        
+                      </p>
+
+                    </div>
+                  </div>
+                  <div class="hestia-info info-horizontal">
+                    <div class="icon icon-primary"><i class="fab fa-linkedin"></i></div>
+                    <div class="description">
+                      <h4 class="info-title" style="font-size: 18px" id="why2">اشترك معنا في لنكد ان </h4>
+                      <p style="color:rgb(255, 255, 255)">نتشرف ان تكون معنا في لنكد ان
+                        
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 col-md-offset-2 hestia-contact-form-col" >
+                <div class="card card-contact">
+                  <div class="header header-raised header-primary text-center fluid-container">
+                    <h4 class="card-title" style="background-color : #7C239A">Contact Us</h4>
+                  </div>
+                  <div class="content">
+                    <div class="wpforms-container wpforms-container-full" id="wpforms-4120">
+                      <form id="wpforms-form-4120" class="wpforms-validate wpforms-form form-group" data-formid="4120"
+                        method="post" enctype="multipart/form-data" action="/hestia/#wpforms-4120"
+                        novalidate="novalidate">
+                        <div class="wpforms-field-container">
+                          <div id="wpforms-4120-field_0-container"
+                            class="wpforms-field wpforms-field-name wpforms-one-half wpforms-first form-group"
+                            data-field-id="0"><label class="wpforms-field-label wpforms-label-hide"
+                              for="wpforms-4120-field_0">Name <span
+                                class="wpforms-required-label">*</span></label><input type="text"
+                              id="wpforms-4120-field_0" class="wpforms-field-large wpforms-field-required form-control"
+                              name="wpforms[fields][0]" placeholder="Your Name" required="" aria-required="true">
+                          </div>
+                          <div id="wpforms-4120-field_3-container"
+                            class="wpforms-field wpforms-field-email wpforms-one-half form-group" data-field-id="3">
+                            <label class="wpforms-field-label wpforms-label-hide" for="wpforms-4120-field_3">Email
+                              <span class="wpforms-required-label">*</span></label><input type="email"
+                              id="wpforms-4120-field_3" class="wpforms-field-large wpforms-field-required form-control"
+                              name="wpforms[fields][3]" placeholder="Your Email" required="" aria-required="true">
+                          </div>
+                          <div id="wpforms-4120-field_4-container" class="wpforms-field wpforms-field-text form-group"
+                            data-field-id="4"><label class="wpforms-field-label wpforms-label-hide"
+                              for="wpforms-4120-field_4">Subject</label><input type="text" id="wpforms-4120-field_4"
+                              class="wpforms-field-large form-control" name="wpforms[fields][4]" placeholder="Subject">
+                          </div>
+                          <div id="wpforms-4120-field_2-container"
+                            class="wpforms-field wpforms-field-textarea form-group" data-field-id="2"><label
+                              class="wpforms-field-label wpforms-label-hide" for="wpforms-4120-field_2">Message
+                              <span class="wpforms-required-label">*</span></label><textarea id="wpforms-4120-field_2"
+                              class="wpforms-field-medium wpforms-field-required form-control" name="wpforms[fields][2]"
+                              placeholder="Your Message" required="" aria-required="true"
+                              style="padding:20px"></textarea>
+                        </div>
+                    </div>
+                    <div class="wpforms-submit-container"><input type="hidden" name="wpforms[id]" value="4120"><input
+                        type="hidden" name="wpforms[author]" value="1"><input type="hidden" name="wpforms[post_id]"
+                        value="25"><button type="submit" name="wpforms[submit]" class="wpforms-submit btn btn-primary "
+                        id="wpforms-submit-4120" value="wpforms-submit" data-alt-text="Sending...">Send message</button>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </section>
+
+
+  </div>
+  </footer>
+
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<script type="text/javascript" src="D:\downloads\DataHomePage\material-kit-html-v2.0.5\material-kit-html-v2.0.5\partecal\particles.js-master\particles.js-master\particles.js"></script>
+<script type="text/javascript" src="D:\downloads\DataHomePage\material-kit-html-v2.0.5\material-kit-html-v2.0.5\partecal\particles.js-master\particles.js-master\demo\js\app.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <script>
+  
+  $(document).ready(function () {
+
+
+                // adds .stuck to the html node when the .trigger hits the top.
+                window.onscroll = function () {
+                    var trigger = document.querySelector('.trigger').getBoundingClientRect();
+                    console.log(trigger); 
+                    if (trigger.top >= 50) {
+                        document.documentElement.removeAttribute('class');
+                    } else {
+                        document.documentElement.setAttribute('class', 'stuck');
+                    }
+                };
+
+            });
+        
+  </script>
+</body>
+
+</html>
